@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from requests_oauthlib import OAuth1Session
-import time
 import json
 import sys
 
