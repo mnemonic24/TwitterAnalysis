@@ -12,7 +12,6 @@ class Twitter:
 
     def get_tweet_users(self, word, count=5, result_type='recent', 
                         until=str(datetime.date.today()), url="https://api.twitter.com/1.1/search/tweets.json"):
-        
         params ={'q': word, 'count': count, 'result_type': result_type, 'until': until}
         users_list = []
         req = self.api.get(url, params=params)
@@ -112,4 +111,7 @@ class Twitter:
         else:
             print("ERROR: %d" % req.status_code)
             return []
+
+    def get_timeline(self):
+
 
